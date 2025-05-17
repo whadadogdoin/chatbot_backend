@@ -118,21 +118,6 @@ The API will be available at [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## Folder Structure
-
-\`\`\`
-/articles       # News articles to ingest
-/app
-  /api          # API route handlers
-  /core         # Core logic for embeddings, search, and chat management
-  /models       # Pydantic models and schemas
-  main.py       # FastAPI app entrypoint
-ingest.py       # Script to ingest and index news articles
-requirements.txt
-.env            # Environment variables (not committed)
-\`\`\`
-
----
 
 ## Future Improvements
 
