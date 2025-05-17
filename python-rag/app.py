@@ -38,6 +38,10 @@ class QueryRequest(BaseModel):
 class QueryResponse(BaseModel):
     result: str
 
+@app.get("/")
+async def root():
+    return {"message": "Hello, I am alive!"}
+
 @app.post("/query", response_model=QueryResponse)
 async def query_handler(payload: QueryRequest):
     try:

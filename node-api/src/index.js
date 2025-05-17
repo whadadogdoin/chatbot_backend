@@ -12,7 +12,7 @@ const port = process.env.PORT || 3001;
 const redis = createClient({ url: process.env.REDIS_URL });
 redis.on('error', err => console.error('Redis Client Error', err));
 await redis.connect();
-const RAG_API_URL = process.env.RAG_API_URL || 'http://localhost:8000/query';   
+const RAG_API_URL = process.env.RAG_API_URL
 
 app.use(cors());
 app.use(express.json());
