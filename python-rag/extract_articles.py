@@ -2,7 +2,6 @@ import os
 import feedparser
 import requests
 from bs4 import BeautifulSoup
-import re
 
 rss_url = "http://feeds.bbci.co.uk/news/world/rss.xml"
 feed = feedparser.parse(rss_url)

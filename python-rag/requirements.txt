@@ -1,10 +1,9 @@
 fastapi
-uvicorn[standard]
-llm
-llm-embed-jina
-qdrant-client
-python-dotenv
+uvicorn
+pydantic
 requests
-news-please
-selenium
-webdrivermanager
+python-dotenv
+qdrant-client
+google-generativeai
+feedparser
+beautifulsoup4
