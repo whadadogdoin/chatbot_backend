@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+llm
+llm-embed-jina
+qdrant-client
+python-dotenv
+requests
+news-please
+selenium
+webdrivermanager
