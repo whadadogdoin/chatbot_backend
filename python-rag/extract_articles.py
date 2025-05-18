@@ -21,7 +21,6 @@ def extract_article_content(url):
 
     return "\n".join(p.get_text(strip=True) for p in paragraphs)
 
-# Create output folder
 output_dir = "bbc_articles_txt"
 os.makedirs(output_dir, exist_ok=True)
 
@@ -31,8 +30,7 @@ for i, entry in enumerate(feed.entries[:50], start=1):
     print(f"Fetching {entry.link} ...")
     content = extract_article_content(entry.link)
     if content:
-        # Clean title to use as filename
-        filename = re.sub(r'[\\/*?:"<>|]',"", entry.title)  # remove illegal filename chars
+        filename = re.sub(r'[\\/*?:"<>|]',"", entry.title)
         filepath = os.path.join(output_dir, f"{i:03d}_{filename}.txt")
         
         with open(filepath, "w", encoding="utf-8") as f:
